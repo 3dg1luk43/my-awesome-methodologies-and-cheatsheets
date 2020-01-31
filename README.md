@@ -1,2 +1,2 @@
 # my-awesome-methodologies
-methodologies for pentesting
+methodologies and cheatsheets collected from internet
