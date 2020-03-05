@@ -83,6 +83,15 @@
 	- Enumeration using ikeprobe tool
 	- Check for VPN group and try to crack PSK in order to get credentials to login into the VPN service through web panel.
 - **SMB (445,137,139) TCP**
+	- Enumeration
+		- `nmblookup -A 192.168.1.103`
+		- `nbtscan 192.168.1.1/24`
+		- `smbmap -H 192.168.1.102 -d metasploitable -u msfadmin -p msfadmin`
+		- `smbclient -L 192.168.1.102`
+		- `smbclient //192.168.1.102/tmp`
+		- `rpcclient -U "" -N 192.168.1.102`
+		- `enumdomusers`
+		- `enum4linux -u msfadmin -a 192.168.0.1`
 	- Check SAMBA service using metasploit use *auxiliary/scanner/smb/smb_version*
 	- Get reverse shell using meterpreter *reverse tcp* module.
 	- Check for SMB related vulnerability using *smb-check-vulns* nmap script.
